@@ -1,7 +1,7 @@
 <?php
 
 include_once 'personnes.php';
-    // question 1 :les clés sont les tableaux mdupond, jm, toto, arn, email, dask;
+    // question 1 :les clés sont des string : mdupond, jm, toto, arn, email, dask; leur type est : tableau (array)
     //valeur de toto : array(4) { ["prenom"]=> string(3) "Tom" ["nom"]=> string(5) "Tonge" ["age"]=> int(18) ["ville"]=> string(6) "Epinay" } 
     echo "question 1 : <br>";
     foreach($personnes['toto'] as $key => $value){
@@ -20,7 +20,7 @@ echo $key." : ". $value.", ";
 
 //  Question 3
 
-function afficheTableau($arr){
+function afficheTableau(Array $arr){
     echo "<table border>";
     echo "<tr>";
     echo "<th>prenom</th>";

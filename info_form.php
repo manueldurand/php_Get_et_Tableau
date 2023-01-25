@@ -1,7 +1,8 @@
 <?php
 include_once 'personnes.php';
-session_start();
-$_SESSION['last_pseudo'] = $_GET['pseudo'];
+if(isset($_GET['ok'])){
+    session_start();
+$_SESSION['last_pseudo'] = $_GET['pseudo'];}
 
 
 ?>
@@ -34,6 +35,9 @@ elseif(!array_key_exists($pseudo, $personnes)){
 
 }
 
+foreach($personnes as $key => $values):?>
+<a href="page_pseudo.php?pseudo=<?=$key?>"><?= $key ?></a>
+<?php endforeach;
 
 ?>
 </body>
